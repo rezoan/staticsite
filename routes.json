@@ -8,7 +8,7 @@
     },
     {
       "route": "/login",
-      "serve": "/.auth/login/github"
+      "serve": "/.auth/login/aad"
     },
     {
       "route": "/logout",
