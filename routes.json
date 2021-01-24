@@ -2,7 +2,17 @@
   "routes": [
     {
       "route": "/*",
-      "serve": "/.auth/login/aad"
+      "serve": "/index.html",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 200
+    },
+    {
+      "route": "/login",
+      "serve": "/.auth/login/github"
+    },
+    {
+      "route": "/logout",
+      "serve": "/.auth/logout"
     }
   ],
   "platformErrorOverrides": [
@@ -13,7 +23,7 @@
     {
       "errorType": "Unauthenticated",
       "statusCode": "302",
-      "serve": "/*"
+      "serve": "/login"
     }
   ],
   "defaultHeaders": {
