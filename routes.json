@@ -3,10 +3,6 @@
     {
       "route": "/*",
       "serve": "/.auth/login/aad"
-    },
-    {
-      "route": "/logout",
-      "serve": "/.auth/logout"
     }
   ],
   "platformErrorOverrides": [
