@@ -5,16 +5,8 @@
       "serve": "/.auth/login/aad"
     },
     {
-      "route": "/.auth/login/twitter",
-      "statusCode": "404"
-    },
-    {
       "route": "/logout",
       "serve": "/.auth/logout"
-    },
-    {
-      "route": "/calendar/*",
-      "serve": "/calendar.html"
     }
   ],
   "platformErrorOverrides": [
@@ -25,7 +17,7 @@
     {
       "errorType": "Unauthenticated",
       "statusCode": "302",
-      "serve": "/login"
+      "serve": "/*"
     }
   ],
   "defaultHeaders": {
