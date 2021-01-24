@@ -1,18 +1,18 @@
 {
   "routes": [
     {
-      "route": "/*",
-      "serve": "/index.html",
-      "allowedRoles": ["authenticated"],
-      "statusCode": 200
-    },
-    {
       "route": "/login",
       "serve": "/.auth/login/aad"
     },
     {
       "route": "/logout",
       "serve": "/.auth/logout"
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 200
     }
   ],
   "platformErrorOverrides": [
