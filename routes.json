@@ -8,6 +8,22 @@
       "route": "/logout",
       "serve": "/.auth/logout"
     },
+    {	
+      "route": "/.auth/login/github",
+      "statusCode": "404"
+    },
+    {	
+      "route": "/.auth/login/twitter",
+      "statusCode": "404"
+    },
+    {
+      "route": "/.auth/login/facebook",
+      "statusCode": "404"
+    },
+    {
+      "route": "/.auth/login/google",
+      "statusCode": "404"
+    },
     {
       "route": "/*",
       "allowedRoles": ["reader","contributor"]
@@ -16,7 +32,7 @@
   "platformErrorOverrides": [
     {
       "errorType": "NotFound",
-      "serve": "/custom-404.html"
+      "serve": "/404.html"
     },
     {
       "errorType": "Unauthenticated",
@@ -28,6 +44,6 @@
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
   },
   "mimeTypes": {
-      "custom": "text/html"
+    "custom": "text/html"
   }
 }
